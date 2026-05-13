@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 45% 98%;
+  --foreground: 216 36% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 216 36% 12%;
+  --primary: 184 78% 42%;
+  --primary-foreground: 210 40% 98%;
+  --muted: 210 25% 93%;
+  --muted-foreground: 215 15% 42%;
+  --border: 212 22% 86%;
+  --input: 212 22% 90%;
+  --ring: 184 78% 42%;
+  --success: 145 63% 40%;
+  --warning: 28 88% 48%;
+}
+
+.dark {
+  --background: 216 45% 10%;
+  --foreground: 210 40% 96%;
+  --card: 218 41% 13%;
+  --card-foreground: 210 40% 96%;
+  --primary: 184 78% 52%;
+  --primary-foreground: 216 45% 10%;
+  --muted: 218 25% 19%;
+  --muted-foreground: 212 20% 72%;
+  --border: 220 22% 24%;
+  --input: 220 22% 24%;
+  --ring: 184 78% 52%;
+  --success: 145 63% 44%;
+  --warning: 28 88% 56%;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  background-image:
+    radial-gradient(circle at 20% 15%, rgba(19, 220, 192, 0.14), transparent 25%),
+    radial-gradient(circle at 80% 0%, rgba(14, 165, 233, 0.18), transparent 28%);
+}
+
+.glass-card {
+  @apply border border-white/15 bg-white/10 backdrop-blur-md dark:bg-slate-900/50;
+}
